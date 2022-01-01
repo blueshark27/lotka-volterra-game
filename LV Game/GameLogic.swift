@@ -76,13 +76,13 @@ class GameLogic
             {
             case Player.empty:
                 // do nothing
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Field is empty. Nothing happens.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Field is empty. Nothing happens.")
             case Player.Prey:
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Prey is on the field. Replaced by predator.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Prey is on the field. Replaced by predator.")
                 self.delegate.update(idx: idx, value: Player.Predator)
             case Player.Predator:
                 // do nothing
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Predator is on the field.Nothing happens.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Predator is on the field.Nothing happens.")
             }
 
             self.currentTurn = Player.Prey
@@ -92,34 +92,34 @@ class GameLogic
             switch val
             {
             case Player.empty:
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Field is empty. Prey is set on that field.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Field is empty. Prey is set on that field.")
                 self.delegate.update(idx: idx, value: Player.Prey)
             case Player.Prey:
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Field occupied by Prey. Checking neighoring fields.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Field occupied by Prey. Checking neighboring fields.")
                 let start1 = max(0, w1-1)
                 let end1 = min(self.rows - 1, w1 + 1)
                 let start2 = max(0, w2-1)
                 let end2 = min(self.colums - 1, w2 + 1)
-                for r in start1...end1
+                outerLoop: for r in start1...end1
                 {
                     for c in start2...end2
                     {
                         let i = r * self.colums + c
                         assert(i < self.fieldCollection.count)
                         let v = self.fieldCollection[i]
-                        NSLog("checking r: \(r) - c: \(c) - v: \(v)")
+                        NSLog("checking r: \(r+1) - c: \(c+1) - v: \(v)")
                         if v == Player.empty
                         {
                             NSLog("field is empty -> putting prey on it")
                             self.fieldCollection[i] = Player.Prey
                             self.delegate.update(idx: i, value: Player.Prey)
-                            break
+                            break outerLoop
                         }
                     }
                 }
             case Player.Predator:
                 // do nothing
-                NSLog("w1: \(w1) - w2: \(w2) - val: \(val) - turn: \(currentTurnString) --> Field is occupied by predator. Nothing happens.")
+                NSLog("w1: \(w1+1) - w2: \(w2+1) - val: \(val) - turn: \(currentTurnString) --> Field is occupied by predator. Nothing happens.")
             }
 
             self.currentTurn = Player.Predator

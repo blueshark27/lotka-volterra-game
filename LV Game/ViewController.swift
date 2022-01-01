@@ -33,7 +33,7 @@ class ViewController: UIViewController, GameLogicDelegate
         gameLogic?.initialValues()
     }
     
-    func makeCheckboardButtons(rows : Int, columns : Int, totalWidth : Int, totalHeight : Int, showIndex : Bool)
+    func makeCheckboardButtons(rows: Int, columns: Int, totalWidth: Int, totalHeight: Int, showIndex: Bool)
     {
         let buttonWidth = totalWidth / (columns + 1)
         let offsetTop = 100
