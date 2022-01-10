@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, GameLogicDelegate
+class GameViewController: UIViewController, GameLogicDelegate
 {
     @IBOutlet weak var buttonNext: UIBarButtonItem!
     var buttonCollection = [UIButton]()
