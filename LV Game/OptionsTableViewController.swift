@@ -121,7 +121,7 @@ class CustomUITextField : UITextField, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // return NO to not change text
         self.defaults.set(self.text, forKey: self.userDefaultsLabel)
-‚        return true
+        return true
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
