@@ -15,7 +15,7 @@
 		C70B6DDC26CC15010038BCF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70B6DDA26CC15010038BCF0 /* LaunchScreen.storyboard */; };
 		C7639E9727826199000D4456 /* OptionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7639E9627826199000D4456 /* OptionsConfiguration.swift */; };
 		C7CE6C8626DF678C00A5FD53 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE6C8526DF678C00A5FD53 /* GameLogic.swift */; };
-		C7E1D9CC27811D3D0057DDA2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D9CB27811D3D0057DDA2 /* TestViewController.swift */; };
+		C7E1D9CC27811D3D0057DDA2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D9CB27811D3D0057DDA2 /* MenuViewController.swift */; };
 		C7E1D9CE27812F580057DDA2 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E1D9CD27812F580057DDA2 /* OptionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		C70B6DDD26CC15010038BCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7639E9627826199000D4456 /* OptionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsConfiguration.swift; sourceTree = "<group>"; };
 		C7CE6C8526DF678C00A5FD53 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
-		C7E1D9CB27811D3D0057DDA2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C7E1D9CB27811D3D0057DDA2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C7E1D9CD27812F580057DDA2 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +67,7 @@
 				C70B6DCF26CC14FF0038BCF0 /* AppDelegate.swift */,
 				C70B6DD126CC14FF0038BCF0 /* SceneDelegate.swift */,
 				C70B6DD326CC14FF0038BCF0 /* GameViewController.swift */,
-				C7E1D9CB27811D3D0057DDA2 /* TestViewController.swift */,
+				C7E1D9CB27811D3D0057DDA2 /* MenuViewController.swift */,
 				C7E1D9CD27812F580057DDA2 /* OptionsTableViewController.swift */,
 				C7639E9627826199000D4456 /* OptionsConfiguration.swift */,
 				C7CE6C8526DF678C00A5FD53 /* GameLogic.swift */,
@@ -149,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E1D9CC27811D3D0057DDA2 /* TestViewController.swift in Sources */,
+				C7E1D9CC27811D3D0057DDA2 /* MenuViewController.swift in Sources */,
 				C70B6DD426CC14FF0038BCF0 /* GameViewController.swift in Sources */,
 				C70B6DD026CC14FF0038BCF0 /* AppDelegate.swift in Sources */,
 				C7CE6C8626DF678C00A5FD53 /* GameLogic.swift in Sources */,

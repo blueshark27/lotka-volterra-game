@@ -7,10 +7,10 @@
 
 import UIKit
 
-class TestViewController: UIViewController
+class MenuViewController: UIViewController
 {
-    @IBOutlet weak var buttonOptions: UIBarButtonItem!
-    @IBOutlet weak var buttonTest: UIBarButtonItem!
+    @IBOutlet weak var buttonOptions: UIButton!
+    @IBOutlet weak var buttonPlay: UIButton!
     
     override func viewDidLoad()
     {
@@ -20,14 +20,13 @@ class TestViewController: UIViewController
         //navigationItem.title = "Startpage"
     }
     
-    @IBAction func onTestButton(sender: UIBarButtonItem, forEvent event: UIEvent)
+    @IBAction func onPlayButton(sender: UIButton, forEvent event: UIEvent)
     {
-        //self.navigationController?.popViewController(animated:true)
         let gameVC = self.storyboard!.instantiateViewController(identifier: "GameViewController")
         self.navigationController?.pushViewController(gameVC, animated: true)
     }
 
-    @IBAction func onOptionsButton(sender: UIBarButtonItem, forEvent event: UIEvent)
+    @IBAction func onOptionsButton(sender: UIButton, forEvent event: UIEvent)
     {
         let optionsVC = self.storyboard!.instantiateViewController(identifier: "OptionsViewController")
         self.navigationController?.pushViewController(optionsVC, animated: true)
